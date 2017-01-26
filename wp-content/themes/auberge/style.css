@@ -3229,3 +3229,24 @@ MY STYLE
 {
 	display: none;
 }
+.posts .entry:hover 
+{
+	padding: 1.62rem;
+	z-index: 9;
+	-webkit-box-shadow: 0 .38rem 1.62rem rgba(0,0,0, .2);
+	box-shadow: 0 .38rem 1.62rem rgba(0,0,0, .2);
+}
+.posts .entry 
+{
+	z-index: 0;
+	-webkit-transition: padding .4s, height .4s, -webkit-transform .4s, -webkit-box-shadow .4s;
+	transition: padding .4s, height .4s, transform .4s, box-shadow .4s;
+}
+.navigation
+{
+	display: none;
+}
+.nav-links
+{
+	display: none;
+}

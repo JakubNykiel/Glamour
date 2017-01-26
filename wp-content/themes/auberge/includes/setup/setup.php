@@ -2634,7 +2634,7 @@
 
 					}
 
-					// Adding "Continue reading" link
+					// Adding "Więcej" link
 
 						if (
 								! is_single()
@@ -2700,7 +2700,7 @@
 
 
 			/**
-			 * Excerpt "Continue reading" text
+			 * Excerpt "Więcej" text
 			 *
 			 * @since    1.0
 			 * @version  2.0
@@ -2712,10 +2712,10 @@
 
 					// Output
 
-						return '<div class="link-more"><a href="' . esc_url( get_permalink() ) . '">' . sprintf( esc_html__( 'Continue reading%s&hellip;', 'glamour' ), '<span class="screen-reader-text"> "' . get_the_title() . '"</span>' ) . '</a></div>';
+						return '<div class="link-more"><a href="' . esc_url( get_permalink() ) . '">' . sprintf( esc_html__( 'Więcej%s&hellip;', 'glamour' ), '<span class="screen-reader-text"> "' . get_the_title() . '"</span>' ) . '</a></div>';
 
 						return '<div class="link-more"><a href="' . esc_url( get_permalink( get_the_ID() ) ) . '" class="more-link">' . sprintf(
-								esc_html_x( 'Continue reading%s&hellip;', '%s: Name of current post.', 'glamour' ),
+								esc_html_x( 'Więcej%s&hellip;', '%s: Name of current post.', 'glamour' ),
 								the_title( '<span class="screen-reader-text"> &ldquo;', '&rdquo;</span>', false )
 							) . '</a></div>';
 

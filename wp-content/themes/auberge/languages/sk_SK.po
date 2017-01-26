@@ -936,13 +936,13 @@ msgstr "Zadajte heslo pre jeho zobrazenie."
 
 #: includes/setup/setup.php:2715
 #, php-format
-msgid "Continue reading%s&hellip;"
+msgid "Więcej%s&hellip;"
 msgstr "Prečítať%s&hellip;"
 
 #: includes/setup/setup.php:2718
 #, php-format
 msgctxt "%s: Name of current post."
-msgid "Continue reading%s&hellip;"
+msgid "Więcej%s&hellip;"
 msgstr "Prečítať%s&hellip;"
 
 #: includes/setup/setup.php:2789
