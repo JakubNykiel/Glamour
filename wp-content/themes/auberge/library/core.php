@@ -411,20 +411,6 @@
 
 						switch ( $meta ) {
 
-							case 'author':
-
-								if ( apply_filters( 'wmhook_wm_post_meta_enable_' . $meta, true, $args ) ) {
-									$helper = ( function_exists( 'wm_schema_org' ) ) ? ( wm_schema_org( 'name' ) ) : ( '' );
-
-									$replacements = array(
-											'{attributes}'  => ( function_exists( 'wm_schema_org' ) ) ? ( wm_schema_org( 'author' ) . wm_schema_org( 'Person' ) ) : ( '' ),
-											'{class}'       => esc_attr( 'byline author vcard entry-meta-element' ),
-											'{description}' => '<span class="entry-meta-description">' . esc_html_x( 'Written by:', 'Post meta info description: author name.', 'glamour' ) . ' </span>',
-											'{content}'     => '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" class="url fn n" rel="author"' . $helper . '>' . get_the_author() . '</a>',
-										);
-								}
-
-							break;
 							case 'category':
 
 								if (
@@ -441,65 +427,7 @@
 								}
 
 							break;
-							case 'comments':
-
-								if (
-										apply_filters( 'wmhook_wm_post_meta_enable_' . $meta, true, $args )
-										&& ! post_password_required()
-										&& (
-											comments_open( $args['post_id'] )
-											|| get_comments_number( $args['post_id'] )
-										)
-									) {
-									$helper       = get_comments_number( $args['post_id'] );
-									$element_id   = ( $helper ) ? ( '#comments' ) : ( '#respond' );
-									$replacements = array(
-											'{attributes}'  => '',
-											'{class}'       => esc_attr( 'comments-link entry-meta-element' ),
-											'{description}' => '<span class="entry-meta-description">' . esc_html_x( 'Comments:', 'Post meta info description: comments count.', 'glamour' ) . ' </span>',
-											'{content}'     => '<a href="' . esc_url( get_permalink( $args['post_id'] ) ) . $element_id . '" title="' . esc_attr( sprintf( esc_html_x( 'Comments: %s', '%s: number of comments.', 'glamour' ), number_format_i18n( $helper ) ) ) . '"><span class="comments-title">' . esc_html_x( 'Comments:', 'Title for number of comments in post meta.', 'glamour' ) . ' </span><span class="comments-count">' . $helper . '</span></a>',
-										);
-								}
-
-							break;
-							case 'date':
-
-								if ( apply_filters( 'wmhook_wm_post_meta_enable_' . $meta, true, $args ) ) {
-									$helper = ( function_exists( 'wm_schema_org' ) ) ? ( wm_schema_org( 'datePublished' ) ) : ( '' );
-
-									$replacements = array(
-											'{attributes}'  => '',
-											'{class}'       => esc_attr( 'entry-date entry-meta-element' ),
-											'{description}' => '<span class="entry-meta-description">' . esc_html_x( 'Posted on:', 'Post meta info description: publish date.', 'glamour' ) . ' </span>',
-											'{content}'     => '<a href="' . esc_url( get_permalink( $args['post_id'] ) ) . '" rel="bookmark"><time datetime="' . esc_attr( get_the_date( 'c' ) ) . '" class="published" title="' . esc_attr( get_the_date() ) . ' | ' . esc_attr( get_the_time( '', $args['post_id'] ) ) . '"' . $helper . '>' . esc_html( get_the_date( $args['date_format'] ) ) . '</time></a>',
-										);
-
-									if ( function_exists( 'wm_schema_org' ) ) {
-										$replacements['{content}'] = $replacements['{content}'] . wm_schema_org( 'dateModified', get_the_modified_date( 'c' ) );
-									}
-								}
-
-							break;
-							case 'edit':
-
-								if (
-										apply_filters( 'wmhook_wm_post_meta_enable_' . $meta, true, $args )
-										&& ( $helper = get_edit_post_link( $args['post_id'] ) )
-									) {
-									$the_title_attribute_args = array( 'echo' => false );
-									if ( $args['post_id'] ) {
-										$the_title_attribute_args['post'] = $args['post_id'];
-									}
-
-									$replacements = array(
-											'{attributes}'  => '',
-											'{class}'       => esc_attr( 'entry-edit entry-meta-element' ),
-											'{description}' => '',
-											'{content}'     => '<a href="' . esc_url( $helper ) . '" title="' . esc_attr( sprintf( esc_html__( 'Edit the "%s"', 'glamour' ), the_title_attribute( $the_title_attribute_args ) ) ) . '"><span>' . esc_html_x( 'Edit', 'Edit post link.', 'glamour' ) . '</span></a>',
-										);
-								}
-
-							break;
+							
 							case 'likes':
 
 								if ( apply_filters( 'wmhook_wm_post_meta_enable_' . $meta, true, $args ) ) {

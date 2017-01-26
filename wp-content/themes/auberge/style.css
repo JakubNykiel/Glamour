@@ -1299,7 +1299,7 @@
 		.is-singular .site-main > .entry {
 			position: relative;
 			float: left;
-			width: 62%;
+			width: 100%;
 		}
 
 		.single-post .entry-header {
@@ -3221,3 +3221,11 @@
 					}
 
 		} /* /(max-width: 42em) */
+
+/*
+MY STYLE
+*/
+.sidebar
+{
+	display: none;
+}
