@@ -567,6 +567,8 @@
 				cursor: pointer;
 				-webkit-transition: all .3s;
 				        transition: all .3s;
+				padding-left: 2em;
+    			padding-right: 2em;
 			}
 
 				.button:hover,
@@ -1587,9 +1589,9 @@
 						content: '\f411';
 					}
 
-					.posts .type-page:before {
+					/*.posts .type-page:before {
 						content: '\f443';
-					}
+					}*/
 
 					.posts .type-nova_menu_item:before {
 						content: '\e603';
@@ -3249,4 +3251,17 @@ MY STYLE
 .nav-links
 {
 	display: none;
+}
+.contact-box
+{
+	text-align: center;
+}
+.contact-content
+{
+	margin-top: 1em;
+}
+.wpcf7-submit
+{
+	display: block;
+	margin: 0 auto;
 }
