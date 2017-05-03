@@ -222,9 +222,6 @@ class Jetpack_RelatedPosts {
 		}
 
 		return <<<EOT
-<div id='jp-relatedposts' class='jp-relatedposts' $exclude>
-	$headline
-</div>
 EOT;
 	}
 

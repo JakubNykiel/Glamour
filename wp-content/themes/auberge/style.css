@@ -1112,14 +1112,14 @@
 					.social-links a {
 						padding-left: .62em;
 						color: inherit;
-						opacity: .5;
+						opacity: 1;
 						-webkit-transition: all .4s;
 						        transition: all .4s;
 					}
 
 						.social-links a:hover {
 							text-decoration: none;
-							opacity: 1;
+							opacity: 0.5;
 						}
 
 						.social-links a:before {
@@ -1160,7 +1160,7 @@
 						.social-links .dropbox a:before                  { content: '\f225'; }
 
 						.social-links a[href*="facebook.com"]:before,
-						.social-links .facebook a:before                 { content: '\f204'; }
+						.social-links .facebook a:before                 { content: '\f203'; color: rgb(59,89,152);}
 
 						.social-links a[href*="flickr.com"]:before,
 						.social-links .flickr a:before                   { content: '\f211'; }
@@ -2157,7 +2157,7 @@
 
 	.site-footer,
 	.front-page-widgets-wrapper {
-		padding: 6% 0;
+		padding: 2% 0;
 	}
 
 
@@ -3264,4 +3264,40 @@ MY STYLE
 {
 	display: block;
 	margin: 0 auto;
+}
+.wpcf7-textarea
+{
+	height: 8.4em;
+}
+.widget
+{
+	z-index: 0;
+	-webkit-transition: padding .4s, height .4s, -webkit-transform .4s, -webkit-box-shadow .4s;
+	transition: padding .4s, height .4s, transform .4s, box-shadow .4s;
+	float: left;
+	position: relative;
+	width: 100%;
+	padding: 0.8rem;
+	border: 2px solid;
+	-webkit-transition: border-color .6s;
+	transition: border-color .6s;
+	-webkit-transition: none;
+	transition: none;
+	text-align: center;
+}
+.widget:hover
+{
+	padding: 0.8rem;
+	z-index: 9;
+	-webkit-box-shadow: 0 .38rem 1.62rem rgba(0,0,0, .2);
+	box-shadow: 0 .38rem 1.62rem rgba(0,0,0, .2);
+	border: 2px solid black;
+}
+.site-banner-thumbnail
+{
+	-webkit-filter: blur(2px);
+}
+.fl-node-589d985f2fd3e
+{
+	height: 100% !important;
 }

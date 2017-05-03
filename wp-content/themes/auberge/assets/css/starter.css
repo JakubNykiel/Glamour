@@ -1546,7 +1546,7 @@
 	textarea,
 	select[multiple],
 	select[size] {
-		height: auto;
+		height: 8.4em;
 		line-height: 1.62;
 	}
 
