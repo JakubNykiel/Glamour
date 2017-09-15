@@ -3348,3 +3348,14 @@ MY STYLE
 .fl-module-content {
 	/* width: 75% !important; */
 }
+#sb_instagram .sbi_photo_wrap {
+	border: 2px solid #eaecee;
+	-webkit-transition: padding .4s, height .4s, -webkit-transform .4s, -webkit-box-shadow .4s, -webkit-border-color .4s;
+    transition: padding .4s, height .4s, transform .4s, box-shadow .4s, border-color .4s;
+}
+#sb_instagram .sbi_photo_wrap:hover {
+	border: 2px solid #333333;
+	box-shadow: 0 0.38rem 1.62rem rgba(0,0,0, .2);
+	-webkit-transition: padding .4s, height .4s, -webkit-transform .4s, -webkit-box-shadow .4s, -webkit-border-color .4s;
+    transition: padding .4s, height .4s, transform .4s, box-shadow .4s, border-color .4s;
+}

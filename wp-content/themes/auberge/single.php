@@ -24,7 +24,6 @@ get_header();
 		 *
 		 * Or, you can use the filter hook below to modify which content file to load.
 		 */
-		 echo do_shortcode("[metaslider id=111]"); 
 		get_template_part( 'template-parts/content', apply_filters( 'wmhook_single_content_type', get_post_format() ) );
 
 	endwhile;
