@@ -470,7 +470,7 @@
 
 		.site-header,
 		.type-img a {
-			line-height: 5rem;
+			line-height: 3rem;
 		}
 
 		h1, h2, h3, h4, h5, h6,
@@ -698,7 +698,7 @@
 		.entry-title,
 		.page-title {
 			padding: 0;
-			margin: 0 0 6%;
+			margin: 0 0 2%;
 			text-transform: uppercase;
 			-ms-word-wrap: break-word;
     	    word-wrap: break-word;
@@ -766,6 +766,7 @@
 			display: inline-block;
 			margin: 0;
 			color: inherit;
+			padding: 0.5em 0;
 		}
 
 			.site-title {
@@ -843,7 +844,7 @@
 				.main-navigation li {
 					float: left;
 					position: relative;
-					padding: 0;
+					padding: 0.4em 0;
 					margin: 0 2em 0 0;
 					white-space: nowrap;
 				}
@@ -857,6 +858,15 @@
 						opacity: .8;
 						-webkit-transition: all .4s ease-in-out;
 						        transition: all .4s ease-in-out;
+						border: 2px solid #eaecee;
+						padding-left: 0.9em;
+						padding-right: 0.9em;
+					}
+	
+
+					.main-navigation ul a:hover
+					{
+						border: 2px solid black;
 					}
 
 					.menu-item-description {
@@ -1013,6 +1023,7 @@
 			.main-navigation .menu li:hover > a,
 			.main-navigation .menu li.active-menu-item > a {
 				opacity: 1;
+				border:2px solid black;
 			}
 
 
@@ -1102,6 +1113,7 @@
 			.social-links ul {
 				margin: 0;
 				list-style: none;
+				font-size: 1.5em;
 				overflow: hidden;
 			}
 
@@ -1160,7 +1172,7 @@
 						.social-links .dropbox a:before                  { content: '\f225'; }
 
 						.social-links a[href*="facebook.com"]:before,
-						.social-links .facebook a:before                 { content: '\f203'; color: rgb(59,89,152);}
+						.social-links .facebook a:before                 { content: '\f203'; color: rgb(59,89,152);padding: 0.2em 0;}
 
 						.social-links a[href*="flickr.com"]:before,
 						.social-links .flickr a:before                   { content: '\f211'; }
@@ -1289,7 +1301,7 @@
  */
 
 	.site-content {
-		padding: 6% 0;
+		padding: 2% 0;
 	}
 
 
@@ -2278,11 +2290,7 @@
 
 		@media only screen and (min-width: 55em) {
 
-			.fl-col-group {
-				width: 100%;
-				width: calc( 100% + 3.24rem );
-				margin: 0 -1.62rem;
-			}
+			
 
 		}
 
@@ -2670,7 +2678,7 @@
 				/* Navigation */
 
 					.main-navigation li {
-						margin-right: 1em;
+						margin-right: 1.2em;
 					}
 
 				/* Social links */
@@ -3267,7 +3275,7 @@ MY STYLE
 }
 .wpcf7-textarea
 {
-	height: 8.4em;
+	height: 3.5em;
 }
 .widget
 {
@@ -3300,4 +3308,43 @@ MY STYLE
 .fl-node-589d985f2fd3e
 {
 	height: 100% !important;
+}
+.fl-node-589d984520b33 h3
+{
+	text-align: center;
+}
+
+.menu-item
+{
+	font-size: 1.17em;
+    font-weight: 400;
+    letter-spacing: .1em;
+}
+.social-links .menu-item
+{
+	font-size: 1.5em;
+}
+.site-banner-content
+{
+	display: none;
+}
+.fl-node-590ba87c4618d .fl-col-content
+{
+	padding: 0;
+}
+*:focus 
+{
+    outline: none !important;
+}
+.content-contact
+{
+	font-size: 0.9em;
+    margin-top: 1rem;
+}
+.post-30
+{
+    font-size: 0.9em;	
+}
+.fl-module-content {
+	/* width: 75% !important; */
 }
