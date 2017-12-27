@@ -766,7 +766,7 @@
 			display: inline-block;
 			margin: 0;
 			color: inherit;
-			padding: 0.5em 0;
+			/* padding: 0.5em 0; */
 		}
 
 			.site-title {
@@ -858,7 +858,7 @@
 						opacity: .8;
 						-webkit-transition: all .4s ease-in-out;
 						        transition: all .4s ease-in-out;
-						border: 2px solid #eaecee;
+						border: 2px solid #BBBCBE;
 						padding-left: 0.9em;
 						padding-right: 0.9em;
 					}
@@ -2758,7 +2758,7 @@
 					position: fixed;
 					width: 100%;
 					left: 0;
-					line-height: 3.62rem;
+					line-height: 3rem;
 					-webkit-backface-visibility: hidden; /* Fixes Webkit element jumping when JS slider used on page */
 				}
 
@@ -3280,21 +3280,25 @@ MY STYLE
 .widget
 {
 	z-index: 0;
-	-webkit-transition: padding .4s, height .4s, -webkit-transform .4s, -webkit-box-shadow .4s;
-	transition: padding .4s, height .4s, transform .4s, box-shadow .4s;
+	/* -webkit-transition: padding .4s, height .4s, -webkit-transform .4s, -webkit-box-shadow .4s; */
+	/* transition: padding .4s, height .4s, transform .4s, box-shadow .4s; */
 	float: left;
 	position: relative;
 	width: 100%;
 	padding: 0.8rem;
 	border: 2px solid;
-	-webkit-transition: border-color .6s;
-	transition: border-color .6s;
-	-webkit-transition: none;
-	transition: none;
+	/* -webkit-transition: border-color .6s; */
+	/* transition: border-color .6s; */
+	/* -webkit-transition: none; */
+	/* transition: none; */
 	text-align: center;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
 }
 .widget:hover
 {
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
 	padding: 0.8rem;
 	z-index: 9;
 	-webkit-box-shadow: 0 .38rem 1.62rem rgba(0,0,0, .2);
@@ -3358,4 +3362,21 @@ MY STYLE
 	box-shadow: 0 0.38rem 1.62rem rgba(0,0,0, .2);
 	-webkit-transition: padding .4s, height .4s, -webkit-transform .4s, -webkit-box-shadow .4s, -webkit-border-color .4s;
     transition: padding .4s, height .4s, transform .4s, box-shadow .4s, border-color .4s;
+}
+/* center in header */
+.site-header {
+	height: 5em;
+}
+.site-header-inner, .main-navigation, .main-navigation-inner, .site-branding, .social-links{
+	height: 100%;
+}
+.menu, .social-links-items, .site-branding h1{
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.site-branding img {
+	max-height: 3rem;
 }
